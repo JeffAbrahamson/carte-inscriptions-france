@@ -50,7 +50,7 @@ def load_commune_data(csv_path="communesdefrancev2.csv"):
     return df
 
 
-def load_participant_data(csv_path="code-ville.csv"):
+def load_participant_data(csv_path="code-ville_v3.csv"):
     """Read points to plot."""
     df = pd.read_csv(csv_path, dtype={"code_postal": str})
     df = df.dropna()
@@ -130,7 +130,7 @@ def plot_it(coords):
     )
 
     plt.title("Inscriptions en France")
-    plt.savefig("carte_codes_postaux.png", dpi=300)
+    plt.savefig("carte_codes_postaux_v3.png", dpi=300)
     plt.close()
 
 
